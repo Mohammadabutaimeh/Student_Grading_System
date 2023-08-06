@@ -81,7 +81,7 @@ if (result>100) {
 
 
 
-if (result>=49 && result<=49) {
+if (result>=0 && result<=49) {
     alert(`The mark ${StudentMark} is equal to the academic grade ( F )\n YOU FAILED\nBetter luck next time!`);  
 } else{
 
