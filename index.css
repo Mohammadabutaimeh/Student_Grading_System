@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+header {
+    background-color: #241468;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+
+}
+.HeaderSystemName{
+
+    color: white;
+    
+
+}
+.System-header{
+    text-decoration: none;
+    font-size: 19px;
+}
+.topnav{
+    display: flex;
+    gap: 20px;
+    color: white;
+    list-style: none;
+    
+}
+.topnav li a  {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+
+}
+
+main{
+    background-image: url(assets/grading_system_main_image.png);
+    background-position: center;
+    background-size:1400px;
+    background-repeat: no-repeat;
+    min-height: calc(200vh - 80px);
+    display: flex;
+    justify-content: center;
+}
