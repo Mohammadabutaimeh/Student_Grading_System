@@ -29,7 +29,7 @@ if (result>100) {
  }
 
 
- if (result=="") {
+ if (result=="" && result !=0) {
     alert(`The mark field is empty mustn't be Null !! `);  
     StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
         result =Math.floor(StudentMark)
