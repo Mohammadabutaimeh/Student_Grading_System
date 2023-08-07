@@ -4,6 +4,20 @@ if (StudentName=="") {
     StudentName=prompt('Please enter your name');
 }
 
+function isNumber(str) {
+    return !!( 
+      str && 
+      str.match(/^\d+$/)); 
+  }
+  if (isNumber(StudentName)) {
+    do {
+      alert('wrong,plrase try again');
+      StudentName=prompt('Please enter your name');
+    }
+    while (isNumber(StudentName));
+  }
+
+
         StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark !`)
         result = Math.floor(StudentMark)
        
