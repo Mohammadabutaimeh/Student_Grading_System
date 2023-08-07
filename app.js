@@ -1,8 +1,12 @@
 let StudentName = prompt('Please enter your name');
-if (StudentName=="") {
-    alert(`you have to enter your name !! `);  
-    StudentName=prompt('Please enter your name');
-}
+if (StudentName=="" ||StudentName==null || StudentName==" ") {
+    do {
+        alert(`Please you have to enter your name !! `);  
+        StudentName=prompt('Please enter your name');
+    }
+    while (StudentName=="" ||StudentName==null || StudentName==" ");
+  }
+
 
 function isNumber(str) {
     return !!( 
@@ -11,12 +15,12 @@ function isNumber(str) {
   }
   if (isNumber(StudentName)) {
     do {
-      alert('wrong,plrase try again');
+      alert('Wrong,please try again');
       StudentName=prompt('Please enter your name');
     }
     while (isNumber(StudentName));
   }
-
+  
 
         StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark !`)
         result = Math.floor(StudentMark)
@@ -43,14 +47,13 @@ function isNumber(str) {
             while (result>100);
           }
 
-          if (result=="" && result !=0) {
+          if (StudentMark=="" || StudentMark==null) {
             do {
-                alert(`the input field is empty please enter your name  !! `);  
-     
+                alert(`The mark Field is empty please enter your mark !! `); 
                 StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
                 result = Math.floor(StudentMark)
             }
-            while (result=="" && result !=0);
+            while (StudentMark=="" || StudentMark==null);
           }
 
 
