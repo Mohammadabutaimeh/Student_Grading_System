@@ -1,10 +1,10 @@
 let StudentName = prompt('Please enter your name');
-if (StudentName=="" ||StudentName==null || StudentName==" ") {
+if (StudentName=="" ||StudentName==" " || StudentName=="  ") {
     do {
         alert(`Please you have to enter your name !! `);  
         StudentName=prompt('Please enter your name');
     }
-    while (StudentName=="" ||StudentName==null || StudentName==" ");
+    while (StudentName=="" ||StudentName==" " || StudentName=="  ");
   }
 
 
@@ -20,6 +20,8 @@ function isNumber(str) {
     }
     while (isNumber(StudentName));
   }
+  
+if (StudentName != null) {
   
 
         StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark !`)
@@ -47,15 +49,15 @@ function isNumber(str) {
             while (result>100);
           }
 
-          if (StudentMark=="" || StudentMark==null) {
+          if (StudentMark=="" || StudentMark==" " || StudentMark=="  ") {
             do {
                 alert(`The mark Field is empty please enter your mark !! `); 
                 StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
                 result = Math.floor(StudentMark)
             }
-            while (StudentMark=="" || StudentMark==null);
+            while (StudentMark=="" || StudentMark==" " || StudentMark=="  ");
           }
-
+if (StudentMark != null) {
 
 if (result>=0 && result<=49) {
     alert(`The mark ${StudentMark} is equal to the academic grade ( F )\n\n                             YOU FAILED \n\n                      Better luck next time!`);  
@@ -84,5 +86,7 @@ if (result>=81 && result<=90) {
 
 if (result>=91 && result<=100) {
     alert(`The mark ${StudentMark} is equal to the academic grade ( A+ )\n\n                             YOU PASSED \n\n                               Congrats!`);  
+}
+}
 }
 }
