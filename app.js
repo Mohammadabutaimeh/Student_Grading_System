@@ -22,34 +22,36 @@ function isNumber(str) {
         result = Math.floor(StudentMark)
        
 
-
-if (result<0) {
-   
-       
-        alert(`The mark ${StudentMark} is less than zero !! `);  
+        if (result<0) {
+            do {
+                alert(`The mark ${StudentMark} is less than zero !! `);  
      
-        StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
-        result = Math.floor(StudentMark)
-        
-        
-  
-}   
+                StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
+                result = Math.floor(StudentMark)
+            }
+            while (result<0);
+          }
+    
+          
+          if (result>100) {
+            do {
+                alert(`The mark ${StudentMark} is more than 100 !! `);  
+     
+                StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
+                result = Math.floor(StudentMark)
+            }
+            while (result>100);
+          }
 
-if (result>100) {
-    alert(`The mark ${StudentMark} is more than 100 !! `);  
-    StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
-        result  = Math.floor(StudentMark)
-       
- }
-
-
- if (result=="" && result !=0) {
-    alert(`The mark field is empty mustn't be Null !! `);  
-    StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
-        result =Math.floor(StudentMark)
-       
- }
-
+          if (result=="" && result !=0) {
+            do {
+                alert(`the input field is empty please enter your name  !! `);  
+     
+                StudentMark = prompt(`Welcome ${StudentName}.\nPlease enter your mark again!`)
+                result = Math.floor(StudentMark)
+            }
+            while (result=="" && result !=0);
+          }
 
 
 if (result>=0 && result<=49) {
